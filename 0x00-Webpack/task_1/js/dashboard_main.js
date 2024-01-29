@@ -11,7 +11,7 @@ $('body').append('Copyright - Holberton School');
 
 // tracks the number of times the button element has been clicked:
 // 1.bind the click event on the button to lodash debounce
-$('button').on('click', _.debounce(updateCounter, 400));
+$('button').on('click', _.debounce(updateCounter, 500));
 // 2.init the count
 let count = 0;
 // 3.update the clicks counter
