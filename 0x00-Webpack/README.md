@@ -9,27 +9,23 @@
 <div align="left">
 <br />
 
-# Heading
+# 0x00. Webpack
 
 ## Learning Objectives
 
 At the end of this project, we are expected to be able to learn:
 
-- 
-- 
-- 
-- 
-- 
-- 
+    - How to setup Webpack for a basic project
+    - Entry points, output, and loaders
+    - How to add plugins
+    - How to split your code into chunks
+    - How to setup a dev server
 
-## subhead 1
+## Requirements
 
-paragraph1.
-
-### subhead 2
-```
-```
-
-[Function link](https://github.com/alx-tools/0x1C.c)
+    - All code will be executed on Ubuntu 18.04 LTS using Node 12.x.x
+    - Allowed editors: vi, vim, emacs, Visual Studio Code
+    - All  files should end with a new line
+    - A README.md file at the root of the folder of the project is mandatory
 
 </div>
