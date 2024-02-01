@@ -40,9 +40,9 @@ module.exports = {
         ],
     },
 	devServer: {
+		hot: true,
 		static: path.resolve('./dist'),
 		compress: true,
 		port: 8564,
-		hot: true,
 	},
 };
