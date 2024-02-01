@@ -1,0 +1,5 @@
+/node_modules
+package-lock.jsoncd
+# Build files
+/build
+/dist
