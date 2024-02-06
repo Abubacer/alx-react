@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #e41d3e;
+  --text-color: #121212;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  background-color: var(--primary-color);
+}

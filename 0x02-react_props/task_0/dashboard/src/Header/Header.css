@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.header-logo {
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+}
