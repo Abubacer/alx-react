@@ -11,6 +11,9 @@ import { getLatestNotification } from "../utils/utils";
 import CourseList from "../CourseList/CourseList";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     const { isLoggedIn } = this.props;
 
