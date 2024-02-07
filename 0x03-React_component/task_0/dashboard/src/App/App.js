@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, Fragment } from 'react';
 import PropTypes from "prop-types";
 
 import "./App.css";
@@ -22,7 +22,7 @@ const listNotifications = [
   { id: 3, type: "urgent", html: { __html: getLatestNotification() } },
 ];
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
   }
@@ -30,12 +30,12 @@ class App extends React.Component {
     const { isLoggedIn } = this.props;
 
     return (
-      <React.Fragment>
+      <Fragment>
         <Notifications listNotifications={listNotifications} />
         <Header />
         {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
         <Footer />
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
