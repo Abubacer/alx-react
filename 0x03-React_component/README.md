@@ -1,0 +1,33 @@
+<!-- repo image -->
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="https://github.com/Abubacer/README-Template/blob/master/images/banner.png" alt="IMG" 
+  </a>
+
+<h1 align="center"></h1>
+<div align="left">
+<br />
+
+# 0x03. React component 
+## Learning Objectives
+
+At the end of this project, we are expected to be able to learn:
+
+
+  - When to use a Class or a function to create a component
+  - The lifecycle of a Class component
+  - How to test a component
+  - How to utilize a Jest spy to verify that a function is being called correctly
+  - What an HOC is and how to use it
+  - How to optimize performance and control which components to render
+
+
+## Requirements
+
+  - All files will be interpreted/compiled on Ubuntu 18.04 LTS using `node 12.x.x` and `npm 6.x.x`
+  - Allowed editors: `vi`, `vim`, `emacs`, `Visual Studio Code`
+  - All files should end with a new line
+  - A `README.md `file, at the root of the folder of the project, is mandatory
+
+</div>
