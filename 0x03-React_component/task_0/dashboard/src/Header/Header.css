@@ -1,14 +1,12 @@
-.header {
-    display: flex;
-    align-items: center;
-    color: var(--secondary-color);
-    border-bottom: 3px solid var(--secondary-color);
-    width: 100%;
-    position: fixed;
+.App-header {
+	font-size: 1.4rem;
+	color: red;
+	display: flex;
+	align-items: center;
+	padding: 1.2em;
 }
 
-.header-logo {
-    width: 180px;
-    height: 180px;
-    pointer-events: none;
+.App-header img {
+	width: 250px;
+	height: 250px;
 }

@@ -1,24 +1,26 @@
-#CourseList {
-    margin: auto;
-    margin-top: 15rem;
-    width:90%;
-    padding: 0.2;
-    border:2px solid #e0e0e0;
+table {
+	margin-top: 2em;
+	width: 90%;
+	height: fit-content;
+	border: 1px solid #ddd;
+	font-size: 1.2rem;
+	margin-bottom: 15em;
 }
 
-#CourseList th[colspan='2'] {
-    text-align: center;
-    border-bottom: 2px solid #e0e0e0;
-    font-size: 1.2rem;
+th {
+	border-bottom: 1px solid #ddd;
 }
 
-#CourseList th {
-    text-align: left;
-    border-bottom: 2px solid #e0e0e0;
-    font-size: 1.2rem;
+th,
+td {
+	width: 80%;
 }
 
-th, td {
-    padding: 0.5rem;
-    text-align: left;
-  }
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr:nth-child(2) {
+	text-align: left;
+}
