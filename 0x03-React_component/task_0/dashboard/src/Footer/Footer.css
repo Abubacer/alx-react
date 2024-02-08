@@ -1,9 +1,9 @@
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    border-top: 3px solid var(--secondary-color);
-    font-style: italic;
-  }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 3px solid var(--secondary-color);
+  font-style: italic;
+}

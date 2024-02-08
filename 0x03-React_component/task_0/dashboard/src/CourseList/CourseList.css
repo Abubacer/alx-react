@@ -1,9 +1,9 @@
 #CourseList {
     margin: auto;
     margin-top: 15rem;
-    width:90%;
+    width: 90%;
     padding: 0.2;
-    border:2px solid #e0e0e0;
+    border: 2px solid #e0e0e0;
 }
 
 #CourseList th[colspan='2'] {
@@ -18,7 +18,8 @@
     font-size: 1.2rem;
 }
 
-th, td {
+th,
+td {
     padding: 0.5rem;
     text-align: left;
-  }
+}
