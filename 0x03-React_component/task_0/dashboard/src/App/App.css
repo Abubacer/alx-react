@@ -4,7 +4,8 @@
 }
 
 .heading-section {
-	border-bottom: 4px solid red;
+	border-bottom: 3px solid #e41d3e;
+	;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;

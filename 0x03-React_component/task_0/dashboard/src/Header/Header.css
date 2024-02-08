@@ -1,12 +1,12 @@
 .App-header {
 	font-size: 1.4rem;
-	color: red;
+	color: #e41d3e;
 	display: flex;
 	align-items: center;
 	padding: 1.2em;
 }
 
 .App-header img {
-	width: 250px;
-	height: 250px;
+	width: 180px;
+	height: 180px;
 }
