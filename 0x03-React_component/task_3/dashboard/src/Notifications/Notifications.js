@@ -52,6 +52,7 @@ class Notifications extends React.Component {
                     type={notification.type}
                     value={notification.value}
                     html={notification.html}
+                    id={notification.id}
                   />
                 ))
               )}

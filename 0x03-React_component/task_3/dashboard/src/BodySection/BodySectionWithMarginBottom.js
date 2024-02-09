@@ -3,7 +3,7 @@ import BodySection from './BodySection';
 import './BodySectionWithMarginBottom.css';
 import PropTypes from 'prop-types';
 
-const BodySectionWithMarginBottom = ({ title, children }) => {
+function BodySectionWithMarginBottom ({ title, children }) {
 	return (
 		<div className='bodySectionWithMargin'>
 			<BodySection title={title}>{children}</BodySection>
