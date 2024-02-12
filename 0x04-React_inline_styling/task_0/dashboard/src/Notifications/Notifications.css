@@ -1,0 +1,39 @@
+.Notifications {
+    background-color: white;
+    border: 2px dashed #e41d3e;
+    padding: 0.6rem;
+    color: #121212;
+    float: left;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+[data-notification-type='default'] {
+    color: blue;
+}
+
+[data-notification-type='urgent'] {
+    color: red;
+}
+
+.Notifications li:hover {
+    cursor: pointer;
+}
+
+.menuItem {
+    position: absolute;
+    right: 2rem;
+    top: 0.1rem;
+    text-align: right;
+}
+
+.Notifications button {
+    z-index: 9999;
+}
+
+.Notifications.fade-out {
+    opacity: 0;
+}
