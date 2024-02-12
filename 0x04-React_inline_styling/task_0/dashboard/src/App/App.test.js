@@ -55,6 +55,7 @@ describe('App component', () => {
         });
     });
 });
+
 describe('ctrl + h alert', () => {
   afterEach(() => {
     jest.clearAllMocks();
