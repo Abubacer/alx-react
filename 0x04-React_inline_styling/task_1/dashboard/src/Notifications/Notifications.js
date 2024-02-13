@@ -25,7 +25,7 @@ class Notifications extends React.Component {
     return (
       <React.Fragment>
         <div className='menuItem'>
-          <p className={css(notificationStyles.menuItem)}>Your notifications</p>
+          <p className={css(menuitemStyles.menuItem)}>Your notifications</p>
         </div>
         {this.props.displayDrawer && (
           <div className={css(notificationStyles.notification)}>
@@ -90,12 +90,9 @@ const notificationStyles = StyleSheet.create({
     right: "2rem",
     top: "3rem",
   },
-  default: {
-      color: "blue",
-  },
-  urgent: {
-      color: "red",
-  },
+});
+
+const menuitemStyles = StyleSheet.create({
   menuItem: {
     position: "absolute",
     right: "2rem",
