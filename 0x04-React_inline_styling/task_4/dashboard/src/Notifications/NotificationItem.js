@@ -38,10 +38,26 @@ NotificationItem.propTypes = {
 
 const itemTypeStyles = StyleSheet.create({
     default: {
-        color: "blue",
+        "@media (max-width: 900px)": {
+            color: "blue",
+            listStyle: "none",
+            padding: "10px 8px",
+            borderBottom: "1px solid black"
+        },
+        "@media (min-width: 900px)": {
+            color: "blue",
+        }
     },
     urgent: {
-        color: "red",
+        "@media (max-width: 900px)": {
+            color: "red",
+            listStyle: "none",
+            padding: "10px 8px",
+            borderBottom: "1px solid black"
+        },
+        "@media (min-width: 900px)": {
+            color: "red",
+        }
     }
 });
 

@@ -11,12 +11,10 @@ class NotificationItem extends React.PureComponent {
             markAsRead(id);
         };
 
-        if (value) {
-            li = <li onClick={handleClick} data-notification-type={type}>{value}</li>;
-        } else if (html) {
-            li = <li onClick={handleClick} data-notification-type={type} dangerouslySetInnerHTML={html}></li>;
+        if (type === 'urgent') {
+            li = <li onClick={handleClick} data-notification-type={type} dangerouslySetInnerHTML={html}>{value}</li>;
         } else {
-            li = <li onClick={handleClick} data-notification-type={type}></li>;
+            li = <li onClick={handleClick} data-notification-type={type} dangerouslySetInnerHTML={html}>{value}</li>;
         }
 
         return li;
@@ -25,8 +23,6 @@ class NotificationItem extends React.PureComponent {
 
 NotificationItem.defaultProps = {
     type: 'default',
-    value: '',
-    html: {},
 };
 
 NotificationItem.propTypes = {
