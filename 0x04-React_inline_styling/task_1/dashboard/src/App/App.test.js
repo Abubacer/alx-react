@@ -4,6 +4,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 // test that App renders without crashing
 // test if the App contain Notifications, Header, Login, and Footer components
@@ -11,7 +12,8 @@ describe('App component', () => {
     let wrapper;
 
     beforeEach(() => {
-        wrapper = shallow(<App />)
+        StyleSheetTestUtils.suppressStyleInjection();
+        wrapper = shallow(<App />);
     });
 
     it('renders without crashing', () => {

@@ -64,7 +64,7 @@ class App extends React.Component {
             </p>
           </BodySection>
         </div>
-        <footer className={css(footerStyles.Footer)}>
+        <footer className={css(footerStyles.footer)}>
           <Footer />
         </footer>
       </React.Fragment>
@@ -92,7 +92,7 @@ const bodyStyles = StyleSheet.create({
 });
 
 const footerStyles = StyleSheet.create({
-  Footer: {
+  footer: {
     position: "fixed",
     left: 0,
     bottom: 0,
