@@ -15,7 +15,7 @@ class Notifications extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     return nextProps.length > this.props.listNotifications.length ||
-    nextProps.displayDrawer != this.props.displayDrawer;
+    this.props.displayDrawer != nextProps.displayDrawer;
   }
 
   markAsRead(id) {
