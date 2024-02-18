@@ -13,18 +13,6 @@ import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBot
 import BodySection from "../BodySection/BodySection";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.logOut = props.logOut;
-    this.state = {
-      displayDrawer: false,
-    };
-
-    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
-    this.handleHideDrawer = this.handleHideDrawer.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
-
   listCourses = [
     { id: 1, name: "ES6", credit: 60 },
     { id: 2, name: "Webpack", credit: 20 },
@@ -36,6 +24,23 @@ class App extends React.Component {
     { id: 2, type: "urgent", value: "New resume available" },
     { id: 3, type: "urgent", html: { __html: getLatestNotification() } },
   ];
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayDrawer: false,
+    };
+
+    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
+    this.handleHideDrawer = this.handleHideDrawer.bind(this);
+  }
+
+  handleDisplayDrawer() {
+    this.setState({ displayDrawer: true });
+  }
+
+  handleHideDrawer() {
+    this.setState({ displayDrawer: false });
+  }
 
   componentDidMount() {
     window.addEventListener("keydown", this.handleKeyDown);
@@ -53,23 +58,15 @@ class App extends React.Component {
     }
   };
 
-  handleDisplayDrawer () {
-    this.setState({ displayDrawer: true });
-  }
-
-  handleHideDrawer () {
-    this.setState({ displayDrawer: false });
-  }
-
   render() {
     return (
       <React.Fragment>
         <div className={css(bodyStyles.body)}>
           <Notifications
-          listNotifications={this.listNotifications}
-          displayDrawer={this.state.displayDrawer}
-          handleDisplayDrawer={this.handleDisplayDrawer}
-          handleHideDrawer={this.handleHideDrawer}
+            listNotifications={this.listNotifications}
+            displayDrawer={this.state.displayDrawer}
+            handleDisplayDrawer={this.handleDisplayDrawer}
+            handleHideDrawer={this.handleHideDrawer}
           />
           <Header />
           {this.props.isLoggedIn ? (
