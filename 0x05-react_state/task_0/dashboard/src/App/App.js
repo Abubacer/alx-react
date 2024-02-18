@@ -16,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.logOut = props.logOut;
-    this.state ={
+    this.state = {
       displayDrawer: false,
     };
 
@@ -53,11 +53,11 @@ class App extends React.Component {
     }
   };
 
-  handleDisplayDrawer = () => {
+  handleDisplayDrawer () {
     this.setState({ displayDrawer: true });
   }
 
-  handleHideDrawer = () => {
+  handleHideDrawer () {
     this.setState({ displayDrawer: false });
   }
 
