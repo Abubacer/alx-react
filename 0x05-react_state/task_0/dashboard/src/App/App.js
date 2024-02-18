@@ -64,13 +64,13 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className={css(bodyStyles.body)}>
           <Notifications
-            listNotifications={this.state.listNotifications}
+            listNotifications={this.listNotifications}
             displayDrawer={this.state.displayDrawer}
             handleDisplayDrawer={this.handleDisplayDrawer}
             handleHideDrawer={this.handleHideDrawer}
           />
+          <div className={css(bodyStyles.body)}>
           <Header />
           {this.props.isLoggedIn ? (
             <BodySectionWithMarginBottom title='Course list'>
