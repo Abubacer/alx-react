@@ -35,7 +35,6 @@ class Notifications extends React.Component {
         {this.props.displayDrawer && (
           <div className={css(notificationStyles.notification)}>
             <button
-              onClick={this.props.handleHideDrawer}
               style={{
                 position: "absolute",
                 background: "transparent",
@@ -47,6 +46,10 @@ class Notifications extends React.Component {
                 cursor: "pointer",
               }}
               aria-label='Close'
+              onClick={(e) => {
+              console.log('Close button has been clicked');
+              this.props.handleHideDrawer();
+              }}
             >
               <img src={closeIcon} alt='close' height='15px' width='15px' />
             </button>
