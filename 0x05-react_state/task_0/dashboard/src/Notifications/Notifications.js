@@ -11,12 +11,10 @@ class Notifications extends React.Component {
   constructor(props) {
     super(props);
     this.markAsRead = this.markAsRead.bind(this);
-    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
-    this.handleHideDrawer = this.handleHideDrawer.bind(this);
-  }
+  };
 
   shouldComponentUpdate(nextProps) {
-    return nextProps.length !== this.props.listNotifications.length ||
+    return nextProps.length > this.props.listNotifications.length ||
     nextProps.displayDrawer !== this.props.displayDrawer;
   }
 

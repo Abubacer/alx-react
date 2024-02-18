@@ -19,6 +19,9 @@ class App extends React.Component {
       displayDrawer: false,
     };
 
+    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
+    this.handleHideDrawer = this.handleHideDrawer.bind(this);
+
     this.listCourses = [
       { id: 1, name: "ES6", credit: 60 },
       { id: 2, name: "Webpack", credit: 20 },
@@ -32,11 +35,11 @@ class App extends React.Component {
     ];
   }
 
-  handleDisplayDrawer = () => {
+  handleDisplayDrawer() {
     this.setState({ displayDrawer: true });
   };
 
-  handleHideDrawer = () => {
+  handleHideDrawer() {
     this.setState({ displayDrawer: false });
   };
 
