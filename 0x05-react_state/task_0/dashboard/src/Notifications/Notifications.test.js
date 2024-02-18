@@ -1,7 +1,11 @@
-import React from "react";
-import { shallow } from "enzyme";
-import Notifications from "./Notifications";
-import { getLatestNotification } from "../utils/utils";
+/**
+ * @jest-environment jsdom
+*/
+import React from 'react';
+import { jest } from '@jest/globals';
+import { shallow, mount } from 'enzyme';
+import Notifications from './Notifications';
+import { getLatestNotification } from '../utils/utils';
 import { StyleSheetTestUtils } from 'aphrodite';
 
 // test Notifications component
@@ -134,5 +138,32 @@ describe("Notifications component props", () => {
     expect(wrapper.instance().shouldComponentUpdate(updatedListNotifications)).toBe(
       true
     );
+  });
+});
+
+describe("Notifications Component Drawer Display handlers", () => {
+  let wrapper;
+  const handleDisplayDrawerMock = jest.fn();
+  const handleHideDrawerMock = jest.fn();
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Notifications
+        displayDrawer={true}
+        listNotifications={[]}
+        handleDisplayDrawer={handleDisplayDrawerMock}
+        handleHideDrawer={handleHideDrawerMock}
+      />
+    );
+  });
+
+  it("verify if clicking on the menu item calls handleDisplayDrawer", () => {
+    wrapper.find(".menuItem p").simulate("click"); // Simulate click on menu item
+    expect(handleDisplayDrawerMock).toHaveBeenCalled(); // Check if handleDisplayDrawer was called
+  });
+
+  it("verify if clicking on the button calls handleHideDrawer", () => {
+    wrapper.find("button").simulate("click"); // Simulate click on close button
+    expect(handleHideDrawerMock).toHaveBeenCalled(); // Check if handleHideDrawer was called
   });
 });
