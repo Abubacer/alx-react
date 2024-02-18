@@ -14,8 +14,8 @@ class Notifications extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    return nextProps.length > this.props.listNotifications.length ||
-    this.props.displayDrawer != nextProps.displayDrawer;
+    return nextProps.length !== this.props.listNotifications.length ||
+    nextProps.displayDrawer !== this.props.displayDrawer;
   }
 
   markAsRead(id) {
@@ -26,7 +26,8 @@ class Notifications extends React.Component {
     return (
       <React.Fragment>
         <div className='menuItem'>
-          <p className={css(menuitemStyles.menuItem, menuitemStyles.hoverAnimation)}
+          <p
+          className={css(menuitemStyles.menuItem, menuitemStyles.hoverAnimation)}
           onClick={this.props.handleDisplayDrawer}
           >
             Your notifications
@@ -46,7 +47,7 @@ class Notifications extends React.Component {
                 cursor: "pointer",
               }}
               aria-label='Close'
-              onClick={(e) => {
+              onClick={() => {
               console.log('Close button has been clicked');
               this.props.handleHideDrawer();
               }}

@@ -64,7 +64,7 @@ describe("App logOut function", () => {
 
   beforeEach(() => {
     StyleSheetTestUtils.suppressStyleInjection();
-    wrapper = mount(<App logOut={()=>{console.log("ctrl and h are pressed")}}/>);
+    wrapper = mount(<App logOut={()=>{}}/>);
   });
 
   afterEach(() => {
