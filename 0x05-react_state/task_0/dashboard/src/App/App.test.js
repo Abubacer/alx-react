@@ -6,6 +6,7 @@ import { shallow, mount } from 'enzyme';
 import { jest } from '@jest/globals';
 import App from './App';
 import { StyleSheetTestUtils } from 'aphrodite';
+import { act } from "react-dom/test-utils";
 
 // test that App renders without crashing
 // test if the App contain Notifications, Header, Login, and Footer components
@@ -88,16 +89,20 @@ describe("App Component's State />", () => {
   });
 
   it('check if default value of displayDrawer in state is false', () => {
-    expect(wrapper.state('displayDrawer')).toBe(false);
+    expect(wrapper.state().displayDrawer).toEqual(false);
+
+    act(() => {
+    const instance = wrapper.instance();
+    instance.handleDisplayDrawer();
+    });
+    expect(wrapper.state().displayDrawer).toEqual(true);
   });
 
-  it('check if after calling handleDisplayDrawer, the state displayDrawer should now be true', () => {
+  it('check if after calling handleDisplayDrawer, the state displayDrawer change to true/false', () => {
     wrapper.instance().handleDisplayDrawer();
-    expect(wrapper.state('displayDrawer')).toBe(true);
-  });
+    expect(wrapper.state().displayDrawer).toEqual(true);
 
-  it('check if after calling handleHideDrawer, the state displayDrawer is updated to be false', () => {
     wrapper.instance().handleHideDrawer();
-    expect(wrapper.state('displayDrawer')).toBe(false);
+    expect(wrapper.state().displayDrawer).toEqual(false);
   });
 });

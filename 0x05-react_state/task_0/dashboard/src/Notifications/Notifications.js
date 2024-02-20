@@ -14,8 +14,10 @@ class Notifications extends React.Component {
   };
 
   shouldComponentUpdate(nextProps) {
-    return nextProps.length > this.props.listNotifications.length ||
-    nextProps.displayDrawer !== this.props.displayDrawer;
+    return (
+      nextProps.listNotifications.length > this.props.listNotifications.length ||
+      nextProps.displayDrawer !== this.props.displayDrawer
+    );
   }
 
   markAsRead(id) {
@@ -23,17 +25,24 @@ class Notifications extends React.Component {
   }
 
   render() {
+    const {
+      listNotifications,
+      displayDrawer,
+      handleDisplayDrawer,
+      handleHideDrawer,
+    } = this.props;
+    
     return (
       <React.Fragment>
         <div className='menuItem'>
           <p
           className={css(menuitemStyles.menuItem, menuitemStyles.hoverAnimation)}
-          onClick={this.props.handleDisplayDrawer}
+          onClick={handleDisplayDrawer}
           >
             Your notifications
           </p>
         </div>
-        {this.props.displayDrawer && (
+        {displayDrawer && (
           <div className={css(notificationStyles.notification)}>
             <button
               style={{
@@ -47,19 +56,16 @@ class Notifications extends React.Component {
                 cursor: "pointer",
               }}
               aria-label='Close'
-              onClick={() => {
-              console.log('Close button has been clicked');
-              this.props.handleHideDrawer();
-              }}
+              onClick={handleHideDrawer}
             >
               <img src={closeIcon} alt='close' height='15px' width='15px' />
             </button>
             <p>Here is the list of notifications</p>
             <ul>
-              {this.props.listNotifications.length === 0 ? (
+              {listNotifications.length === 0 ? (
                 <NotificationItem value='No new notification for now' />
               ) : (
-                this.props.listNotifications.map((notification) => (
+                listNotifications.map((notification) => (
                   <NotificationItem
                     key={notification.id}
                     markAsRead={this.markAsRead}

@@ -1,12 +1,12 @@
 /**
  * @jest-environment jsdom
-*/
-import React from 'react';
-import { jest } from '@jest/globals';
-import { shallow, mount } from 'enzyme';
-import Notifications from './Notifications';
-import { getLatestNotification } from '../utils/utils';
-import { StyleSheetTestUtils } from 'aphrodite';
+ */
+import React from "react";
+import { jest } from "@jest/globals";
+import { shallow, mount } from "enzyme";
+import Notifications from "./Notifications";
+import { getLatestNotification } from "../utils/utils";
+import { StyleSheetTestUtils } from "aphrodite";
 
 // test Notifications component
 describe("Notifications component", () => {
@@ -83,18 +83,18 @@ describe("Notifications component", () => {
   });
 });
 
-describe('onclick markAsRead event behaves as it should', () => {
-	it('should call console.log with Notification $id has been marked as read', () => {
-		const wrapper = shallow(<Notifications />);
-		const spy = jest.spyOn(console, 'log').mockImplementation();
+describe("onclick markAsRead event behaves as it should", () => {
+  it("should call console.log with Notification $id has been marked as read", () => {
+    const wrapper = shallow(<Notifications />);
+    const spy = jest.spyOn(console, "log").mockImplementation();
 
-		wrapper.instance().markAsRead = spy;
-		wrapper.instance().markAsRead(1);
-		expect(wrapper.instance().markAsRead).toBeCalledWith(1);
-		expect(spy).toBeCalledTimes(1);
-		expect(spy).toBeCalledWith(1);
-		spy.mockRestore();
-	});
+    wrapper.instance().markAsRead = spy;
+    wrapper.instance().markAsRead(1);
+    expect(wrapper.instance().markAsRead).toBeCalledWith(1);
+    expect(spy).toBeCalledTimes(1);
+    expect(spy).toBeCalledWith(1);
+    spy.mockRestore();
+  });
 });
 
 describe("Notifications component props", () => {
@@ -115,9 +115,11 @@ describe("Notifications component props", () => {
         listNotifications={listNotifications}
       />
     );
-    wrapper.setProps({listNotifications: listNotifications});
-    expect(wrapper.find('NotificationItem').length).toBe(3);
-    expect(wrapper.find('NotificationItem').first().props().value).toEqual("New course available");
+    wrapper.setProps({ listNotifications: listNotifications });
+    expect(wrapper.find("NotificationItem").length).toBe(3);
+    expect(wrapper.find("NotificationItem").first().props().value).toEqual(
+      "New course available"
+    );
   });
 
   it("rerenders if listNotifications is changed", () => {
@@ -135,9 +137,7 @@ describe("Notifications component props", () => {
       />
     );
 
-    expect(wrapper.instance().shouldComponentUpdate(updatedListNotifications)).toBe(
-      true
-    );
+    expect(wrapper.instance().shouldComponentUpdate({ listNotifications: updatedListNotifications })).toBe(true);
   });
 });
 
