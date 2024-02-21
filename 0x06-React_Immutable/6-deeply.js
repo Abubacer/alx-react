@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 
 // merges two Immutable Maps deeply and returns a List containing the values of the two pages
-export function mergeDeeplyElements(page1, page2) {
+export default function mergeDeeplyElements(page1, page2) {
   return Map(page1).mergeDeep(Map(page2));
 }
 
