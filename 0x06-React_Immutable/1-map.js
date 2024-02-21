@@ -1,11 +1,9 @@
 import { Map } from 'immutable';
 
 // accepts object as a parameter and converts it into an immutable Map
-function getImmutableObject (object) {
+export default function getImmutableObject (object) {
   return Map(object);
 }
-
-export default getImmutableObject;
 
 /* Usage example:
 const object = {
