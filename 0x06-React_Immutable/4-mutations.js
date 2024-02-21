@@ -8,6 +8,7 @@ export const map = Map({
   5: 'Jacob',
   6: 'Lucas',
 });
+
 // Apply multiple mutations to the initial map
 export const map2 = map.withMutations((mapElement) => {
   mapElement.set(2, 'Benjamin').set(4, 'Oliver');
