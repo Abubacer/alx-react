@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 
 // accepts object as a parameter and converts it into an immutable Map
-export default function getImmutableObject (object) {
+export default function getImmutableObject(object) {
   return Map(object);
 }
 
